@@ -1,0 +1,71 @@
+Hi Collin,
+
+I will provide you with the Fortran source code for TRANS4D (version 0.2.6), together with some descriptive information, in five installments with this being the first installment.
+
+This installment includes the current version of the “TRANS4D User Guide”. This first installment also includes two technical publications discussing some of the crustal motion issues addressed by TRANS4D.
+
+The second installment will include the bulk of the Fortran source code for TRANS4D (version 0.2.6).
+
+The third installment will include velocity data for seven regions in Fortran’s “unformatted” format.
+      
+The fourth installment will include velocity data for the Caribbean region in Fortran’s “unformatted” format.
+
+The fifth installment will include several data sets that may be used to familiarize yourself with the use of TRANS4D.
+
+Cheers,
+Richard Snay
+
+ATTACHMENTS: TRANS4D Users Guide.docx, 2016 TRANS4D_0.1.pdf, 2018 Vertical velocities in western CONUS.pdf
+----------------------------------------------------------------------------------
+
+Hi Collin,
+
+This second installment includes the five files embodying the Fortran source for TRANS4D (version 0.2.6).
+
+The bulk of the source code is contained in “trans4d.f”.
+
+The other four files constitute information in Fortran’s “block data” format:
+•         initbd.f – specifies the geographic boundary for each regional model
+•         initeq.f – specifies the parameters for 29 earthquakes
+•         initps.f – specifies the parameters for postseismic motion
+•         initvl.f – specifies the parameters for the velocity grids .
+
+These five files need to be compiled together to create the executable code for TRANS4D. 
+ 
+Cheers,
+Richard Snay
+
+ATTACHMENTS: trans4d.f, initbd.f, initeq.f, initps.f, initvl.f
+----------------------------------------------------------------------------------
+
+Hi Collin,
+
+This third installment contains velocity data for seven (of the eight) gridded regions in Fortran’s “unformatted” format. The TRANS4D’s executable code will read this file as needed.
+
+Cheers,
+Richard Snay
+
+ATTACHMENTS: Data4.2.5A.txt
+----------------------------------------------------------------------------------
+
+Hi Collin,
+
+This fourth installment contains velocity data for the Caribbean region in Fortran’s “unformatted” format. The TRANS4D’s executable code will read this file as needed.
+
+Cheers,
+Richard Snay
+
+ATTACHMENTS: Data4.2.5B.txt
+----------------------------------------------------------------------------------
+
+Hi Collin,
+
+This fifth installment contains several data sets that may be used to familiarize yourself with the use of TRANS4D. 
+
+Note that the “TRANS4D Users Guide”, that was provided in the first installment, contains a set of seven exercises to familiarize people with the use of TRANS4D. In particular, these exercises involve the use of the data sets contained in this installment.
+
+Cheers,
+Richard Snay
+
+ATTACHMENTS: infile2.txt, wa.bfile.txt, wa.gfile.txt
+----------------------------------------------------------------------------------

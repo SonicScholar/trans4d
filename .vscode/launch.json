@@ -16,7 +16,7 @@
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
-            "miDebuggerPath": "/usr/local/bin/gdb"
+            "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe"
         },
         // {
         //     "name": "Intel Debug Attach",

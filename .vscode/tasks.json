@@ -5,14 +5,30 @@
     "tasks": [
       {
         "type": "shell",
+        "label": "create bin directory",
+        "command": "mkdir",
+        "args": [
+          "-g",
+          //"-ffpe-trap=zero,invalid,overflow,underflow",
+          "${workspaceFolder}/src/fortran/*.f",
+          "-o",
+          "${workspaceFolder}/bin/trans4d.exe"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "group": "build"
+      },
+      {
+        "type": "shell",
         "label": "gfortran compile",
         "command": "gfortran",
         "args": [
           "-g",
-          "-ffpe-trap=zero,invalid,overflow,underflow",
+          //"-ffpe-trap=zero,invalid,overflow,underflow",
           "${workspaceFolder}/src/fortran/*.f",
           "-o",
-          "${workspaceFolder}/bin/trans4d"
+          "${workspaceFolder}/bin/trans4d.exe"
         ],
         "options": {
           "cwd": "${workspaceFolder}"

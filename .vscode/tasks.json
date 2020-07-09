@@ -38,9 +38,9 @@
       {
           "type":"shell",
           "label": "copy velocity data",
-          "command" : "cp",
+          "command" : "copy-item",
           "args": [
-              "${workspaceFolder}/src/fortran/Data4.2.5{A,B}.txt",
+              "${workspaceFolder}/src/fortran/Data4.2.5[AB].txt",
               "${workspaceFolder}/bin"
           ],
           "group":{

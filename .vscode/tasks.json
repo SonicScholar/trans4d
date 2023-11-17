@@ -1,37 +1,34 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
-      {
-        "type": "shell",
-        "label": "gfortran compile",
-        "command": "gfortran",
-        "args": [
-          "-g",
-          //"-ffpe-trap=zero,invalid,overflow,underflow",
-          "${workspaceFolder}/src/fortran/*.f",
-          "-o",
-          "${workspaceFolder}/bin/trans4d.exe"
-        ],
-        "options": {
-          "cwd": "${workspaceFolder}"
-        },
-        "group": "build"
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "gfortran compile",
+      "command": "gfortran",
+      "args": [
+        "-g",
+        //"-ffpe-trap=zero,invalid,overflow,underflow",
+        "${workspaceFolder}/src/*.f",
+        "-o",
+        "${workspaceFolder}/bin/trans4d.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
       },
-      {
-          "type":"shell",
-          "label": "copy velocity data",
-          "command" : "copy-item",
-          "args": [
-              "${workspaceFolder}/src/fortran/Data4.2.5[AB].txt",
-              "${workspaceFolder}/bin"
-          ],
-          "group":{
-              "kind": "build",
-              "isDefault": true
-          },
-          "dependsOn": ["gfortran compile"]
-      }
-    ]
-  }
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "copy velocity data",
+      "command": "copy-item",
+      "args": ["${workspaceFolder}/grid/Grid-*.txt", "${workspaceFolder}/bin"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": ["gfortran compile"]
+    }
+  ]
+}
